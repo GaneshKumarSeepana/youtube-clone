@@ -14,11 +14,12 @@ function App() {
   const fetchVideos = async (searchTerm = '') => {
     setLoading(true);
     try {
-      let url = `http://localhost:5000/api/videos/search?q=${searchTerm}`;
+      const API_BASE = import.meta.env.VITE_API_URL || 'http://localhost:5000';
+      let url = `${API_BASE}/api/videos/search?q=${searchTerm}`;
 
       // Special case for History
       if (searchTerm === 'History') {
-        url = `http://localhost:5000/api/history`;
+        url = `${API_BASE}/api/history`;
       }
 
       const response = await fetch(url);
@@ -35,7 +36,8 @@ function App() {
     setSelectedVideoId(video.videoId);
     // Add to watch history
     try {
-      await fetch('http://localhost:5000/api/history', {
+      const API_BASE = import.meta.env.VITE_API_URL || 'http://localhost:5000';
+      await fetch(`${API_BASE}/api/history`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(video)
