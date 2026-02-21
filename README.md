@@ -31,14 +31,6 @@ git clone https://github.com/GaneshKumarSeepana/youtube-clone.git
 cd youtube-clone
 ```
 
-### 2. Environment Setup
-Create a `.env` file in the `server` directory:
-```env
-MONGO_URI=your_mongodb_connection_string
-YOUTUBE_API_KEY=your_google_cloud_api_key
-PORT=5000
-```
-
 ### 3. Install Dependencies
 ```bash
 # Install server dependencies
