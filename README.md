@@ -31,7 +31,7 @@ git clone https://github.com/GaneshKumarSeepana/youtube-clone.git
 cd youtube-clone
 ```
 
-### 3. Install Dependencies
+### 2. Install Dependencies
 ```bash
 # Install server dependencies
 cd server
@@ -42,7 +42,7 @@ cd ../client
 npm install
 ```
 
-### 4. Run Locally
+### 3. Run Locally
 ```bash
 # Start backend (from server folder)
 npm run dev
